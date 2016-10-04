@@ -1,0 +1,331 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+	box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5em;
+  color: #7F7F8E;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #FAFAFA;
+  text-align: center;
+}
+
+nav{
+  list-style-type: none;
+}
+
+.site-content{
+  flex: 1;
+}
+
+p{
+  font-size: 1.05em;
+}
+
+h1,
+h2,
+h4,
+.main-nav a,
+.secondary-nav a{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+a {
+	color: #222222;
+}
+
+h2{
+  margin-bottom: 2em;
+}
+
+h3{
+  font-size: 1.1em;
+}
+
+h2,
+h4,
+.main-nav a{
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+
+.main-nav li{
+  background-color: white;
+  margin-bottom: .5em;
+  width: 100%;
+}
+
+.main-nav a,
+.secondary-nav a{
+  display: block;
+  padding: .5em;
+}
+
+.main-nav a:hover {
+	color: #093b58;
+}
+
+.name{
+  font-size: 1.5em;
+  padding: .2em 1em;
+}
+
+.secondary-nav{
+  display: none;
+}
+
+.footer-nav{
+  align-items: center;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header{
+  padding: 2em 1em;
+}
+
+.profile p{
+  font-size: 1.1em;
+}
+
+.portfolio,
+.footer-nav{
+  display: flex;
+}
+
+.portfolio{
+  flex-direction: column;
+  padding: 2em 1em;
+  background-color: white;
+}
+
+.item{
+  margin-bottom: .8em;
+}
+
+.main-footer{
+  padding: 3em .9em .5em .9em;
+}
+
+/* ---- Page Elements ---- */
+.profile-photo {
+  width: 65%;
+}
+
+.portfolio-header{
+  margin-bottom: 2.5em;
+}
+
+.item img,
+hr{
+  margin-bottom: .5em;
+}
+
+.main-footer p,
+.footer-name{
+  font-size: 1em;
+}
+
+.main-footer p{
+  margin-bottom: .2em;
+}
+
+.main-footer p a{
+  font-weight: bold;
+}
+
+.footer-info{
+  margin-bottom: 4em;
+}
+
+.footer-name{
+  margin-right: auto;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+ /* ---- Tablet ---- */
+
+@media (min-width: 768px){
+  
+  
+  /* ---- Navigation ---- */
+
+  
+  .main-nav,
+  .main-nav ul{
+    display: flex;
+  }
+  
+  .main-nav{
+    flex-direction: column;
+  }
+  
+  .main-nav ul{
+    width: 600px;
+    align-items: center; 
+    margin: auto;
+  }
+  
+  .main-nav li{
+    background-color: #FAFAFA;
+  }
+  
+  
+  .secondary-nav{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-size: .8em;
+  }
+  
+  .main-nav a{
+    margin: 1em 0 1em 0;
+  }
+  
+  .secondary-nav{
+    margin-right: -.8em;
+  }
+ 
+  .secondary-nav a{
+    padding: 1em;
+  }
+  
+  .footer-nav{
+    margin: 0 4em 4em 4em;
+  }
+  
+  .back{
+    display: none;
+  }
+  
+  /* ---- Layout Containers ---- */
+  
+  .portfolio{
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around; 
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  
+    .profile{
+    padding: 0 2em 3em 2em;  
+  }
+  
+  
+  /* ---- Page Elements ---- */
+
+  .profile p{
+    text-align: left;
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
+  
+  .profile-photo{
+    float: right;
+    width: 43%;
+    margin-left: 5px;
+  }
+  
+  .portfolio-header{
+    width: 100%;
+  }
+  
+  .item{
+    width: 48%;
+  }
+  
+  .item p{
+    display: inline-block;
+    margin: -.25em 1em 1.75em 1em;
+  }
+ 
+  .footer-info{
+    width: 70%;
+    margin: auto;
+  }
+  
+  hr{
+    margin: 4em 4em 0 4em;
+  }
+  
+  .clearfix::after {
+    content: "";
+	display: table;
+    clear: both;
+  }
+}
+
+/* ---- Desktop ---- */
+
+@media (min-width: 1024px){
+  
+  /* ---- Navigation ---- */
+  .main-nav{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .name{
+    margin-right: auto;
+  }
+  
+  .main-nav ul{
+    margin-right: -1em;
+  }
+  
+  
+  
+  /* ---- Layout Containers ---- */
+  
+  .main-header,
+  .profile{
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  
+  .portfolio{
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  
+  /* ---- Page Elements ---- */
+  .profile-photo{
+    margin-left: 3em;
+  }
+  .item {
+    width: 31%;
+  }
+}
